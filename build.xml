@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="test_report" default="all" basedir=".">
+	<!-- ========== Initialize Properties =================================== -->
+	<!-- set global properties for build -->
+	<property name="basedir" value="." />
+	<property name="lib" value="${basedir}/lib" />
+	<property name="src" value="${basedir}/src" />
+	<property name="bin" value="${basedir}/bin" />
+	<property name="report-dir" value="${basedir}/Test-Report" />
+	<echo> /* Compiled Directory Classes */ </echo>
+	<property name="testng-report-dir" value="${report-dir}/TestNGreport" />
+	<property name="jar_dir" value="${basedir}/lib" />
+	
+	
+	<path id="classpath">
+		<pathelement location="${bin}" />
+		<fileset dir="${lib}">
+			<include name="*.jar" />
+			
+			
+		</fileset>
+	</path>
+	
+	
+	<!-- Delete directories  -->
+	<target name="delete-dir">
+		<delete dir="${bin}" />
+		<delete dir="${report-dir}" />
+		<echo> /* Deleted Directory Classes */ </echo>
+	</target>
+	
+	<!-- Creating directories -->
+	<target name="create" depends="delete-dir">
+		<mkdir dir="${bin}" />
+		<mkdir dir="${report-dir}" />
+		<echo> /* Created Directory Classes */ </echo>
+	</target>
+	
+	
+	
+	<target name="compile" depends="create">
+		<javac srcdir="${src}" classpathref="classpath" includeAntRuntime="No" destdir="${bin}" />
+		<echo> /* Compiled Directory Classes */ </echo>
+	</target>
+	
+
+	<taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="classpath" >
+	<classpath location="lib/testng-6.8.14.jar" />
+	<classpath location="lib/jcommander.jar" />
+	<classpath location="lib/bsh-2.0b4.jar" />
+	<classpath location="lib/selenium-server-standalone-3.14.0.jar" />
+	</taskdef>
+	
+	<target name="testng-execution" depends="compile">
+		<mkdir dir="${testng-report-dir}" />
+		<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="true">
+			<xmlfileset dir="${basedir}" includes="testng.xml" />
+		</testng>
+	</target>
+	
+	<target name="generateReport">
+<delete dir="${basedir}/testng-xslt"> </delete>
+<mkdir dir="${basedir}/testng-xslt"> </mkdir>
+<xslt out="${basedir}/testng-xslt/index.html" style="${basedir}/testng-results.xsl" in="${basedir}/test-output/testng-results.xml">
+<param name="testNgXslt.outputDir" expression="${basedir}/testng-xslt/"/>
+<param name="testNgXslt.sortTestCaseLinks" expression="true"/>
+<param name="testNgXslt.testDetailsFilter" expression="FAIL,SKIP,PASS,CONF,BY_CLASS"/>
+<param name="testNgXslt.showRuntimeTotals" expression="true"/>
+<classpath refid="classpath"> </classpath>
+</xslt>
+</target>
+	
+
+	<target name="all" depends=" delete-dir,create,compile,testng-execution,generateReport" />
+</project>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+      <class name="test_report.Basic_Search_Autosearch_And_Pagination"/>
+      <class name="test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB"/>
+      <class name="test_report.BasicSearch_Filter_With_Valid_Invalid_Value"/>
+      <class name="test_report.Basic_Search_Invalid"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

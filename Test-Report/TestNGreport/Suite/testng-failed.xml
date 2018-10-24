@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="none">
+  <test name="Test(failed)" parallel="none" preserve-order="false">
+    <classes>
+      <class name="test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB">
+        <methods>
+          <include name="OfferType_Count"/>
+          <include name="Search_count_byCommerceoffer"/>
+          <include name="Search_byPF_Count"/>
+          <include name="Search_byOfferType"/>
+        </methods>
+      </class>
+      <class name="test_report.BasicSearch_Filter_With_Valid_Invalid_Value">
+        <methods>
+          <include name="Basic_Search_Filter_byInvDescription"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

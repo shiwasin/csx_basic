@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="SHIWASIN-T5X72" name="test_report.BasicSearch_Filter_With_Valid_Invalid_Value" tests="40" failures="5" timestamp="24 Oct 2018 01:50:59 GMT" time="21007.592" errors="0">
+  <testcase name="Basic_Search_Filter_byDelOption" time="121.245" classname="test_report.BasicSearch_Filter_With_Valid_Invalid_Value"/>
+  <testcase name="Basic_Search_Filter_byDescription" time="103.283" classname="test_report.BasicSearch_Filter_With_Valid_Invalid_Value"/>
+  <testcase name="Basic_Search_Filter_byInvDelOption" time="114.406" classname="test_report.BasicSearch_Filter_With_Valid_Invalid_Value"/>
+  <testcase name="Basic_Search_Filter_byInvDescription" time="17300.848" classname="test_report.BasicSearch_Filter_With_Valid_Invalid_Value">
+    <failure type="org.openqa.selenium.WebDriverException" message="Failed to decode response from marionette
+Build info: version: &amp;apos;3.14.0&amp;apos;, revision: &amp;apos;aacccce0&amp;apos;, time: &amp;apos;2018-08-02T20:13:22.693Z&amp;apos;
+System info: host: &amp;apos;SHIWASIN-T5X72&amp;apos;, ip: &amp;apos;10.65.55.4&amp;apos;, os.name: &amp;apos;Windows 10&amp;apos;, os.arch: &amp;apos;amd64&amp;apos;, os.version: &amp;apos;10.0&amp;apos;, java.version: &amp;apos;1.8.0_181&amp;apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 23856, moz:profile: C:\Users\shiwasin.PARTNERS\..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 287f5a1e-1561-403f-a470-27eebd849263
+*** Element info: {Using=tag name, value=input}">
+      <![CDATA[org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:13:22.693Z'
+System info: host: 'SHIWASIN-T5X72', ip: '10.65.55.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 23856, moz:profile: C:\Users\shiwasin.PARTNERS\..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 287f5a1e-1561-403f-a470-27eebd849263
+*** Element info: {Using=tag name, value=input}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByTagName(RemoteWebDriver.java:392)
+	at org.openqa.selenium.By$ByTagName.findElement(By.java:320)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at test_report.BasicSearch_Filter_With_Valid_Invalid_Value.Basic_Search_Filter_byInvDescription(Unknown Source)
+... Removed 28 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="Basic_Search_Filter_byInvPF" time="88.579" classname="test_report.BasicSearch_Filter_With_Valid_Invalid_Value"/>
+  <testcase name="Basic_Search_Filter_byInvProductSubType" time="92.021" classname="test_report.BasicSearch_Filter_With_Valid_Invalid_Value"/>
+  <testcase name="Basic_Search_Filter_byInv_ItemName" time="88.486" classname="test_report.BasicSearch_Filter_With_Valid_Invalid_Value"/>
+  <testcase name="Basic_Search_Filter_byInv_ProductType" time="111.159" classname="test_report.BasicSearch_Filter_With_Valid_Invalid_Value"/>
+  <testcase name="Basic_Search_Filter_byItemName" time="95.9" classname="test_report.BasicSearch_Filter_With_Valid_Invalid_Value"/>
+  <testcase name="Basic_Search_Filter_byPF" time="89.949" classname="test_report.BasicSearch_Filter_With_Valid_Invalid_Value"/>
+  <testcase name="Basic_Search_Filter_byProductSubType" time="88.964" classname="test_report.BasicSearch_Filter_With_Valid_Invalid_Value"/>
+  <testcase name="Basic_Search_Filter_byProductType" time="89.271" classname="test_report.BasicSearch_Filter_With_Valid_Invalid_Value"/>
+  <testcase name="Filter_Value_Should_be_Clear" time="171.937" classname="test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB"/>
+  <testcase name="OfferType_Count" time="95.567" classname="test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB">
+    <failure type="org.openqa.selenium.NoSuchElementException" message="Unable to locate element: /html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &amp;apos;3.14.0&amp;apos;, revision: &amp;apos;aacccce0&amp;apos;, time: &amp;apos;2018-08-02T20:13:22.693Z&amp;apos;
+System info: host: &amp;apos;SHIWASIN-T5X72&amp;apos;, ip: &amp;apos;10.65.55.4&amp;apos;, os.name: &amp;apos;Windows 10&amp;apos;, os.arch: &amp;apos;amd64&amp;apos;, os.version: &amp;apos;10.0&amp;apos;, java.version: &amp;apos;1.8.0_181&amp;apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 27836, moz:profile: C:\Users\shiwasin.PARTNERS\..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 680133e4-ab99-4eed-b657-1aaac0a6208c
+*** Element info: {Using=xpath, value=/html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody}">
+      <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:13:22.693Z'
+System info: host: 'SHIWASIN-T5X72', ip: '10.65.55.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 27836, moz:profile: C:\Users\shiwasin.PARTNERS\..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 680133e4-ab99-4eed-b657-1aaac0a6208c
+*** Element info: {Using=xpath, value=/html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB.OfferType_Count(Unknown Source)
+... Removed 28 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="Search_byCommerceOffer" time="122.894" classname="test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB"/>
+  <testcase name="Search_byOfferType" time="110.272" classname="test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB">
+    <failure type="org.openqa.selenium.NoSuchElementException" message="Unable to locate element: /html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody/tr[1]/td[8]/div
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &amp;apos;3.14.0&amp;apos;, revision: &amp;apos;aacccce0&amp;apos;, time: &amp;apos;2018-08-02T20:13:22.693Z&amp;apos;
+System info: host: &amp;apos;SHIWASIN-T5X72&amp;apos;, ip: &amp;apos;10.65.55.4&amp;apos;, os.name: &amp;apos;Windows 10&amp;apos;, os.arch: &amp;apos;amd64&amp;apos;, os.version: &amp;apos;10.0&amp;apos;, java.version: &amp;apos;1.8.0_181&amp;apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 20520, moz:profile: C:\Users\shiwasin.PARTNERS\..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: abff4476-2bcc-4528-a8c0-4b939c639c12
+*** Element info: {Using=xpath, value=/html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody/tr[1]/td[8]/div}">
+      <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody/tr[1]/td[8]/div
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:13:22.693Z'
+System info: host: 'SHIWASIN-T5X72', ip: '10.65.55.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 20520, moz:profile: C:\Users\shiwasin.PARTNERS\..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: abff4476-2bcc-4528-a8c0-4b939c639c12
+*** Element info: {Using=xpath, value=/html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody/tr[1]/td[8]/div}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB.Search_byOfferType(Unknown Source)
+... Removed 28 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="Search_byPF" time="131.138" classname="test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB"/>
+  <testcase name="Search_byPF_Count" time="89.016" classname="test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB">
+    <failure type="org.openqa.selenium.NoSuchElementException" message="Unable to locate element: /html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &amp;apos;3.14.0&amp;apos;, revision: &amp;apos;aacccce0&amp;apos;, time: &amp;apos;2018-08-02T20:13:22.693Z&amp;apos;
+System info: host: &amp;apos;SHIWASIN-T5X72&amp;apos;, ip: &amp;apos;10.65.55.4&amp;apos;, os.name: &amp;apos;Windows 10&amp;apos;, os.arch: &amp;apos;amd64&amp;apos;, os.version: &amp;apos;10.0&amp;apos;, java.version: &amp;apos;1.8.0_181&amp;apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 31068, moz:profile: C:\Users\shiwasin.PARTNERS\..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: fea2d2b7-7d6a-4a02-a459-1bb43a970e98
+*** Element info: {Using=xpath, value=/html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody}">
+      <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:13:22.693Z'
+System info: host: 'SHIWASIN-T5X72', ip: '10.65.55.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 31068, moz:profile: C:\Users\shiwasin.PARTNERS\..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: fea2d2b7-7d6a-4a02-a459-1bb43a970e98
+*** Element info: {Using=xpath, value=/html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB.Search_byPF_Count(Unknown Source)
+... Removed 28 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="Search_count_byCommerceoffer" time="87.894" classname="test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB">
+    <failure type="org.openqa.selenium.NoSuchElementException" message="Unable to locate element: /html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &amp;apos;3.14.0&amp;apos;, revision: &amp;apos;aacccce0&amp;apos;, time: &amp;apos;2018-08-02T20:13:22.693Z&amp;apos;
+System info: host: &amp;apos;SHIWASIN-T5X72&amp;apos;, ip: &amp;apos;10.65.55.4&amp;apos;, os.name: &amp;apos;Windows 10&amp;apos;, os.arch: &amp;apos;amd64&amp;apos;, os.version: &amp;apos;10.0&amp;apos;, java.version: &amp;apos;1.8.0_181&amp;apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 32516, moz:profile: C:\Users\shiwasin.PARTNERS\..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 4a096188-5347-442f-a561-010f8fc1c769
+*** Element info: {Using=xpath, value=/html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody}">
+      <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:13:22.693Z'
+System info: host: 'SHIWASIN-T5X72', ip: '10.65.55.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 32516, moz:profile: C:\Users\shiwasin.PARTNERS\..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 4a096188-5347-442f-a561-010f8fc1c769
+*** Element info: {Using=xpath, value=/html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB.Search_count_byCommerceoffer(Unknown Source)
+... Removed 28 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="Validate_Minor_Available_Or_Not" time="87.519" classname="test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB"/>
+  <testcase name="Validate_Subscription_BOM" time="70.31" classname="test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB"/>
+  <testcase name="AutoSearch_byCommerceOffer" time="82.207" classname="test_report.Basic_Search_Autosearch_And_Pagination"/>
+  <testcase name="AutoSearch_byOfferType" time="82.704" classname="test_report.Basic_Search_Autosearch_And_Pagination"/>
+  <testcase name="AutoSearch_byPF" time="82.677" classname="test_report.Basic_Search_Autosearch_And_Pagination"/>
+  <testcase name="Pagination_by_Admin_10" time="70.943" classname="test_report.Basic_Search_Autosearch_And_Pagination"/>
+  <testcase name="Pagination_by_Admin_50" time="90.113" classname="test_report.Basic_Search_Autosearch_And_Pagination"/>
+  <testcase name="verify_By_default_selected_Items" time="115.376" classname="test_report.Basic_Search_Autosearch_And_Pagination"/>
+  <testcase name="verify_show_hide_Parameters" time="99.302" classname="test_report.Basic_Search_Autosearch_And_Pagination"/>
+  <testcase name="Basic_Search_Filter_byInvDelOption" time="109.152" classname="test_report.Basic_Search_Invalid"/>
+  <testcase name="Basic_Search_Filter_byInvDescription" time="101.379" classname="test_report.Basic_Search_Invalid"/>
+  <testcase name="Basic_Search_Filter_byInvPF" time="88.453" classname="test_report.Basic_Search_Invalid"/>
+  <testcase name="Basic_Search_Filter_byInvProductSubType" time="91.529" classname="test_report.Basic_Search_Invalid"/>
+  <testcase name="Basic_Search_Filter_byInv_ItemName" time="90.034" classname="test_report.Basic_Search_Invalid"/>
+  <testcase name="Basic_Search_Filter_byInv_ProductType" time="112.272" classname="test_report.Basic_Search_Invalid"/>
+  <testcase name="Search_by_Invalid_CommerceOffer" time="69.575" classname="test_report.Basic_Search_Invalid"/>
+  <testcase name="Search_by_Invalid_OfferType" time="78.403" classname="test_report.Basic_Search_Invalid"/>
+  <testcase name="Search_by_Invalid_PF" time="76.155" classname="test_report.Basic_Search_Invalid"/>
+  <testcase name="Search_by_blank_Coffer" time="65.573" classname="test_report.Basic_Search_Invalid"/>
+  <testcase name="Search_by_blank_Offertype" time="72.325" classname="test_report.Basic_Search_Invalid"/>
+  <testcase name="Search_by_blank_PF" time="78.735" classname="test_report.Basic_Search_Invalid"/>
+</testsuite>
