@@ -51,8 +51,8 @@ public class Advance_Search {
 		WebDriver driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
@@ -62,20 +62,20 @@ public class Advance_Search {
 		 
 		 File shot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		 FileUtils.copyFile(shot, new File("C:/Users/shiwasin.PARTNERS/Desktop/gitWorkspace/CSX/error.png"));
-		 Thread.sleep(10000);
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
-		 Thread.sleep(2000);
+		 Thread.sleep(5000);
 		 driver.findElement(By.name("Technology Group")).sendKeys("ATTG");
-		 Thread.sleep(2000);
+		 Thread.sleep(5000);
 		 driver.findElement(By.name("Business Unit")).sendKeys("OTBU");
-		 Thread.sleep(2000);
-		 driver.findElement(By.name("Product Family")).sendKeys("15200");
-		 Thread.sleep(2000);
+		 Thread.sleep(5000);
+		 driver.findElement(By.name("Product Family")).sendKeys("15216");
+		 Thread.sleep(5000);
 		 driver.findElement(By.xpath("//button[2]")).click();
-		 Thread.sleep(2000);
+		 Thread.sleep(10000);
 		 String Total_Count=driver.findElement(By.xpath("//li/div/span")).getText();
 		 File Total_Count_ui=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		 FileUtils.copyFile(Total_Count_ui, new File("C:/Users/shiwasin.PARTNERS/Desktop/gitWorkspace/CSX/Total_Count_ui.png"));
+		 FileUtils.copyFile(Total_Count_ui, new File("C:/Users/shiwasin.PARTNERS/Desktop/gitWorkspace/test_report/Advancesearch/Total_Count_ui.png"));
 		 int Total_Records=Integer.parseInt(Total_Count);
 		 System.out.println(Total_Records);
 		 Thread.sleep(2000);
@@ -92,33 +92,33 @@ public class Advance_Search {
 	
 	
 	@Test
-	public void Advancesearch_verify_the_Pictorial_View() throws InterruptedException{
+	public void Advancesearch_verify_the_Pictorial_View() throws InterruptedException, IOException{
 		
 		 System.setProperty("webdriver.gecko.driver",Brow);
 		 FirefoxProfile profile=new FirefoxProfile();
 		 WebDriver driver=new FirefoxDriver();
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 Thread.sleep(7000);
-		 driver.findElement(By.className("filter")).click();
-		 Thread.sleep(2000);
+		 Thread.sleep(20000);
 		 driver.findElement(By.name("Technology Group")).sendKeys("ATTG");
 		 Thread.sleep(2000);
 		 driver.findElement(By.name("Business Unit")).sendKeys("OTBU");
 		 Thread.sleep(2000);
-		 driver.findElement(By.name("Product Family")).sendKeys("15200");
-		 Thread.sleep(2000);
+		 driver.findElement(By.name("Product Family")).sendKeys("15216");
+		 Thread.sleep(10000);
 		 Actions action=new Actions(driver);
 		 action.moveToElement(driver.findElement(By.xpath("//button[2]"))).click().build().perform();
 		Thread.sleep(2000);
+		File Pictorial_Count_ui=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		 FileUtils.copyFile(Pictorial_Count_ui, new File("C:/Users/shiwasin.PARTNERS/Desktop/gitWorkspace/test_report/Advancesearch/Total_Count_ui.png"));
 		String Total_Count=driver.findElement(By.xpath("//li/div/span")).getText();
 		int Total_Records=Integer.parseInt(Total_Count);
 		System.out.println(Total_Records);
@@ -143,6 +143,7 @@ public class Advance_Search {
 			String ITEM_NAME_2=driver.findElement(By.xpath("//li[2]/div[2]/ul/li/div/span")).getText();
 			
 			 System.out.println(ITEM_NAME_2+""+ITEM_TYPE_RECORD_2);
+			 driver.close();
 		 }
 	 
 		
@@ -159,15 +160,15 @@ public class Advance_Search {
 		 WebDriver driver=new FirefoxDriver();
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 driver.manage().timeouts().implicitlyWait(5,TimeUnit.MINUTES);
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
 		 Thread.sleep(10000);
 		 driver.findElement(By.name("Technology Group")).sendKeys("&^*");
@@ -194,15 +195,15 @@ public class Advance_Search {
 		WebDriver driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 driver.manage().timeouts().implicitlyWait(5,TimeUnit.MINUTES);
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
 		 Thread.sleep(10000);
 		 driver.findElement(By.name("Technology Group")).sendKeys("&^*");
@@ -226,15 +227,15 @@ public class Advance_Search {
 		WebDriver driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 driver.manage().timeouts().implicitlyWait(5,TimeUnit.MINUTES);
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
 		 Thread.sleep(10000);
 		 driver.findElement(By.name("Technology Group")).sendKeys("CAPRODTG");
@@ -246,7 +247,7 @@ public class Advance_Search {
 		 Assert.assertEquals(driver.findElement(By.name("Product Family")).isEnabled(),false, "it's not working as expected");
 		 //Assert.assertEquals(status_BU, false);
 		 System.out.println(status_PF);
-		 driver.close();
+		// driver.close();
 		 
 		 
 		
@@ -261,15 +262,15 @@ public class Advance_Search {
 		WebDriver driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 driver.manage().timeouts().implicitlyWait(5,TimeUnit.MINUTES);
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
 		 Thread.sleep(10000);
 		 driver.findElement(By.name("Technology Group")).sendKeys("CAP");
@@ -278,6 +279,7 @@ public class Advance_Search {
 		 Assert.assertEquals(driver.findElement(By.id("ngb-typeahead-1-0")).isDisplayed(), true);
 		 System.out.println(driver.findElement(By.id("ngb-typeahead-1-0")).isDisplayed());
 	}
+	
 	@Test
 	public void Autosearch_with_BU() throws Throwable{
 		
@@ -286,18 +288,19 @@ public class Advance_Search {
 		WebDriver driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 driver.manage().timeouts().implicitlyWait(5,TimeUnit.MINUTES);
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
-		 driver.findElement(By.name("Technology Group")).sendKeys("CAPRODTG");
 		 Thread.sleep(10000);
+		 driver.findElement(By.name("Technology Group")).sendKeys("CAPRODTG");
+		 
 		 Thread.sleep(10000);
 		 driver.findElement(By.name("Business Unit")).sendKeys("C");
 		 Thread.sleep(10000);
@@ -315,21 +318,21 @@ public class Advance_Search {
 		 WebDriver driver=new FirefoxDriver();
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 driver.manage().timeouts().implicitlyWait(5,TimeUnit.MINUTES);
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
+		 Thread.sleep(10000);
 		 driver.findElement(By.name("Technology Group")).sendKeys("CAPRODTG");
 		 Thread.sleep(10000);
 		 driver.findElement(By.name("Business Unit")).sendKeys("CMSMSBU");
 		 Thread.sleep(10000);
-		
 		 driver.findElement(By.name("Product Family")).sendKeys("C");
 		 Thread.sleep(10000);
 		 driver.findElement(By.id("ngb-typeahead-3-0")).isDisplayed();
@@ -345,15 +348,15 @@ public class Advance_Search {
 		 WebDriver driver=new FirefoxDriver();
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 driver.manage().timeouts().implicitlyWait(5,TimeUnit.MINUTES);
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
 		 
 		 String parameter_1=driver.findElement(By.xpath("//input[@placeholder='Technology Group']")).getAttribute("placeholder");
@@ -394,15 +397,16 @@ public class Advance_Search {
 		 WebDriver driver=new FirefoxDriver();
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 driver.manage().timeouts().implicitlyWait(5,TimeUnit.MINUTES);
+		// driver.manage().timeouts().implicitlyWait(5,TimeUnit.MINUTES);
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
 		 
 		 String TG_Blank=driver.findElement(By.name("Technology Group")).getText();
@@ -463,8 +467,8 @@ public class Advance_Search {
 		 WebDriver driver=new FirefoxDriver();
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
@@ -472,7 +476,7 @@ public class Advance_Search {
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
 		 //driver.manage().timeouts().implicitlyWait(5,TimeUnit.MINUTES);
-		 Thread.sleep(7000);
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
 		 Thread.sleep(1000);
 		 
@@ -514,7 +518,7 @@ public class Advance_Search {
 	
 		 try {
 	  			Class.forName("oracle.jdbc.driver.OracleDriver");
-	  			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@ldap://ldap-ldstg3.cisco.com:5000/cn=OracleContext,dc=cisco,dc=com/TS1CG1_SRVC_OTH","XXWOC","Pr1R4M9M");
+	  			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@ldap://ldap-ldstg3.cisco.com:5000/cn=OracleContext,dc=cisco,dc=com/TS3CG1_SRVC_OTH","XXWOC","Pr1R4M9M");
 	  			//if(con!=null)System.out.println("found");
 	  			 
 	  			Statement stmt=con.createStatement(); 
@@ -553,16 +557,16 @@ public class Advance_Search {
 		 WebDriver driver=new FirefoxDriver();
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 driver.manage().timeouts().implicitlyWait(5,TimeUnit.MINUTES);
-		 Thread.sleep(3000);
+		 Thread.sleep(20000);
+		// Thread.sleep(3000);
 		 driver.findElement(By.className("filter")).click();
 		 Thread.sleep(1000);
 		 
@@ -586,7 +590,7 @@ public class Advance_Search {
 	
 		 try {
 	  			Class.forName("oracle.jdbc.driver.OracleDriver");
-	  			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@ldap://ldap-ldstg3.cisco.com:5000/cn=OracleContext,dc=cisco,dc=com/TS1CG1_SRVC_OTH","XXWOC","Pr1R4M9M");
+	  			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@ldap://ldap-ldstg3.cisco.com:5000/cn=OracleContext,dc=cisco,dc=com/TS3CG1_SRVC_OTH","XXWOC","Pr1R4M9M");
 	  			//if(con!=null)System.out.println("found");
 	  			 
 	  			Statement stmt=con.createStatement(); 
@@ -616,17 +620,15 @@ public class Advance_Search {
 		 WebDriver driver=new FirefoxDriver();
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 
-		 Thread.sleep(3000);
-		 
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
 		 Thread.sleep(1000);
 		 
@@ -662,7 +664,7 @@ public class Advance_Search {
 	
 		 try {
 	  			Class.forName("oracle.jdbc.driver.OracleDriver");
-	  			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@ldap://ldap-ldstg3.cisco.com:5000/cn=OracleContext,dc=cisco,dc=com/TS1CG1_SRVC_OTH","XXWOC","Pr1R4M9M");
+	  			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@ldap://tns-prod:5000/TS3CG1,cn=OracleContext,dc=cisco,dc=com","XXWOC","Pr1R4M9M");
 	  			//if(con!=null)System.out.println("found");
 	  			 ArrayList<String> technologyGroupArrayList = new ArrayList<String>();
 	  			Statement stmt=con.createStatement(); 
@@ -694,22 +696,22 @@ public class Advance_Search {
 		WebDriver driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 Thread.sleep(5000);
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
 		 Thread.sleep(2000);
 		 driver.findElement(By.name("Technology Group")).sendKeys("ATTG");
 		 Thread.sleep(2000);
 		 driver.findElement(By.name("Business Unit")).sendKeys("OTBU");
 		 Thread.sleep(2000);
-		 driver.findElement(By.name("Product Family")).sendKeys("15200");
+		 driver.findElement(By.name("Product Family")).sendKeys("15216");
 		 Thread.sleep(4000);
 		 driver.findElement(By.xpath("//button[2]")).click();
 		Thread.sleep(2000);
@@ -745,25 +747,26 @@ public class Advance_Search {
 		WebDriver driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 Thread.sleep(5000);
+		 //Thread.sleep(5000);
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
 		 Thread.sleep(2000);
 		 driver.findElement(By.name("Technology Group")).sendKeys("ATTG");
 		 Thread.sleep(2000);
 		 driver.findElement(By.name("Business Unit")).sendKeys("OTBU");
 		 Thread.sleep(2000);
-		 driver.findElement(By.name("Product Family")).sendKeys("15200");
+		 driver.findElement(By.name("Product Family")).sendKeys("15216");
 		 Thread.sleep(4000);
 		 driver.findElement(By.xpath("//button[2]")).click();
-		 Thread.sleep(1000);
+		 Thread.sleep(10000);
 		 String Total_Offers=driver.findElement(By.xpath("//li/div/span")).getText();
 		 int Total_Offers_Count=Integer.parseInt(Total_Offers);
 		 System.out.println(Total_Offers_Count);
@@ -785,15 +788,15 @@ public class Advance_Search {
 		 WebDriver driver=new FirefoxDriver();
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 Thread.sleep(5000);
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
 		 Thread.sleep(2000);
 		 driver.findElement(By.name("Technology Group")).sendKeys("ATTG");
@@ -802,10 +805,10 @@ public class Advance_Search {
 		 driver.findElement(By.name("Business Unit")).sendKeys("OTBU");
 		 Thread.sleep(2000);
 		 
-		 driver.findElement(By.name("Product Family")).sendKeys("15200");
+		 driver.findElement(By.name("Product Family")).sendKeys("15216");
 		 Thread.sleep(4000);
 		 driver.findElement(By.xpath("//button[2]")).click();
-		 Thread.sleep(2000);
+		 Thread.sleep(10000);
 		 String Total_Offers=driver.findElement(By.xpath("//li/div/span")).getText();
 		 int Total_Offers_Count=Integer.parseInt(Total_Offers);
 		 System.out.println(Total_Offers_Count);
@@ -833,94 +836,101 @@ public class Advance_Search {
 		 
 		 
 }
-	@Test
-  	public void Verify_the_PF_Value_on_Pictorial_View_And_PID_LIST() throws InterruptedException{
+	public void Verify_the_PF_Value_on_Pictorial_View_And_PID_LIST() throws InterruptedException{
  		
- 		 System.setProperty("webdriver.gecko.driver",Brow);
- 		 FirefoxProfile profile=new FirefoxProfile();
- 		 WebDriver driver=new FirefoxDriver();
- 		 driver.manage().window().maximize();
- 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
- 		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
- 		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
- 		 driver.findElement(By.id("login-button")).click();
- 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
- 		 String pTitle=driver.getTitle();
- 		 System.out.println(pTitle);
- 		 Assert.assertEquals(pTitle, "Customer Success Portal");
- 		 System.out.println("Page Verified");
- 		 Thread.sleep(5000);
- 		 driver.findElement(By.className("filter")).click();
- 		 Thread.sleep(2000);
- 		 driver.findElement(By.name("Technology Group")).click();
- 		 Thread.sleep(3000);
- 		 String TG_Name=driver.findElement(By.id("ngb-typeahead-1-0")).getText();
- 		 System.out.println(TG_Name);
- 		 driver.findElement(By.name("Technology Group")).sendKeys(TG_Name);
- 		 Thread.sleep(5000);
- 		 driver.findElement(By.name("Business Unit")).click();
- 		 Thread.sleep(5000);
- 		 String BU_Name=driver.findElement(By.id("ngb-typeahead-2-0")).getText();
- 		 System.out.println(BU_Name);
- 		 driver.findElement(By.name("Business Unit")).sendKeys(BU_Name);
- 		 Thread.sleep(5000);
- 		 driver.findElement(By.name("Product Family")).click();
- 		 Thread.sleep(3000);
-		String PF_Name=driver.findElement(By.id("ngb-typeahead-3-0")).getText();
-		System.out.println(PF_Name);
- 		driver.findElement(By.name("Product Family")).sendKeys(PF_Name);
- 		Thread.sleep(7000);
- 		driver.findElement(By.xpath("//button[2]")).click();
- 		Thread.sleep(7000);
- 		String PF_NAME_PICTORIAL=driver.findElement(By.xpath("//div[2]/ul/li/div")).getText();
- 		String ss=driver.findElement(By.xpath("//li/div/span")).getText();
- 		 
- 		 
- 		System.out.println("UI : "+ PF_NAME_PICTORIAL);
- 		String[] arrSplit = PF_NAME_PICTORIAL.split("\n");
- 		String product_family=arrSplit[0];
- 	   	System.out.println("Found PF : "+product_family );
- 	    System.out.println("Search PF Nme is:"+PF_Name+"   "+"Pictorial View PF is:"+product_family);
-
-		 Assert.assertEquals(product_family, PF_Name);
-		 String PF_NAME_PID_LIST=driver.findElement(By.xpath("//td[4]/div")).getText();
-		 Assert.assertEquals(PF_NAME_PID_LIST, PF_Name);
-		//System.out.println("PF name displayion on PID LIST:"+PF_Name+"   "+"Pictorial View PF is:"+PF_VALUE);
-		 driver.quit();
-
- 	  }
-
- 	
- 		  		
-
- 		 
-		@Test	
-	public void Verify_total_Count_with_TG_PF_BU() throws InterruptedException{
-		
 		 System.setProperty("webdriver.gecko.driver",Brow);
 		 FirefoxProfile profile=new FirefoxProfile();
 		 WebDriver driver=new FirefoxDriver();
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
 		 System.out.println(pTitle);
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
-		 Thread.sleep(8000);
+		 Thread.sleep(20000);
 		 driver.findElement(By.className("filter")).click();
 		 Thread.sleep(2000);
-		 driver.findElement(By.name("Technology Group")).sendKeys("ATTG");
+		 driver.findElement(By.name("Technology Group")).click();
+		 Thread.sleep(3000);
+		 String TG_Name=driver.findElement(By.id("ngb-typeahead-1-0")).getText();
+		 System.out.println(TG_Name);
+		 driver.findElement(By.name("Technology Group")).sendKeys(TG_Name);
+		 Thread.sleep(5000);
+		 driver.findElement(By.name("Business Unit")).click();
+		 Thread.sleep(5000);
+		 String BU_Name=driver.findElement(By.id("ngb-typeahead-2-0")).getText();
+		 System.out.println(BU_Name);
+		 driver.findElement(By.name("Business Unit")).sendKeys(BU_Name);
+		 Thread.sleep(5000);
+		 driver.findElement(By.name("Product Family")).click();
+		 Thread.sleep(3000);
+		String PF_Name=driver.findElement(By.id("ngb-typeahead-3-0")).getText();
+		System.out.println(PF_Name);
+		driver.findElement(By.name("Product Family")).sendKeys(PF_Name);
+		Thread.sleep(7000);
+		driver.findElement(By.xpath("//button[2]")).click();
+		Thread.sleep(10000);
+		
+		String Message=driver.findElement(By.className("no-ato-span")).getText();
+		
+		if(Message.isEmpty()){
+		String PF_NAME_PICTORIAL=driver.findElement(By.xpath("//div[2]/ul/li/div")).getText();
+		String ss=driver.findElement(By.xpath("//li/div/span")).getText();
+		 
+		 
+		System.out.println("UI : "+ PF_NAME_PICTORIAL);
+		String[] arrSplit = PF_NAME_PICTORIAL.split("\n");
+		String product_family=arrSplit[0];
+	   	System.out.println("Found PF : "+product_family );
+	    System.out.println("Search PF Nme is:"+PF_Name+"   "+"Pictorial View PF is:"+product_family);
+
+		 Assert.assertEquals(product_family, PF_Name);
+		 String PF_NAME_PID_LIST=driver.findElement(By.xpath("//td[4]/div")).getText();
+		 Assert.assertEquals(PF_NAME_PID_LIST, PF_Name);
+		}
+		else{
+			System.out.println("No ATO's present matching this search");
+		}
+		//System.out.println("PF name displayion on PID LIST:"+PF_Name+"   "+"Pictorial View PF is:"+PF_VALUE);
+		// driver.quit();
+
+	  }
+
+ 	
+ 		  		
+
+ 		 
+		@Test	
+		public void Verify_total_Count_with_TG_PF_BU() throws InterruptedException{
+		
+		 System.setProperty("webdriver.gecko.driver",Brow);
+		 FirefoxProfile profile=new FirefoxProfile();
+		 WebDriver driver=new FirefoxDriver();
+		 driver.manage().window().maximize();
+		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
+		 driver.findElement(By.id("login-button")).click();
+		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
+		 String pTitle=driver.getTitle();
+		 System.out.println(pTitle);
+		 Assert.assertEquals(pTitle, "Customer Success Portal");
+		 System.out.println("Page Verified");
+		 Thread.sleep(20000);
+		 driver.findElement(By.className("filter")).click();
+		 Thread.sleep(2000);
+		 driver.findElement(By.name("Technology Group")).sendKeys("CSPTG");
 		 Thread.sleep(4000);
-		 driver.findElement(By.name("Business Unit")).sendKeys("OTBU");
+		 driver.findElement(By.name("Business Unit")).sendKeys("DCSABU");
 		 Thread.sleep(4000);
-		 driver.findElement(By.name("Product Family")).sendKeys("15200");
+		 driver.findElement(By.name("Product Family")).sendKeys("C1N6000");
 		 Thread.sleep(5000);
 		 driver.findElement(By.xpath("//button[2]")).click();
-		 Thread.sleep(2000);
+		 Thread.sleep(10000);
 		 
 		 String Total_Count_UI=driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Show'])[1]/following::span[1]")).getText();
 		 System.out.println(Total_Count_UI);
@@ -942,14 +952,14 @@ public class Advance_Search {
 		 
 		 try {
 	  			Class.forName("oracle.jdbc.driver.OracleDriver");
-	  			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@ldap://ldap-ldstg3.cisco.com:5000/cn=OracleContext,dc=cisco,dc=com/TS1CG1_SRVC_OTH","XXWOC","Pr1R4M9M");
+	  			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@ldap://ldap-ldstg3.cisco.com:5000/cn=OracleContext,dc=cisco,dc=com/TS3CG1_SRVC_OTH","XXWOC","Pr1R4M9M");
 	  			//if(con!=null)System.out.println("found");
 	  			 
 	  			Statement stmt=con.createStatement(); 
 	  			int count_db=0;
 	  			ArrayList<String> item_name=new ArrayList<String>();
 	  			
-	  			ResultSet rs=stmt.executeQuery("SELECT ir.ITEM_NAME Item_Name,ir.item_type,ir.DESCRIPTION DESCRIPTION,ir.PRODUCT_TYPE,msi.inventory_item_status_code,(SELECT C_EXT_ATTR14 FROM apps.ego_mtl_sy_items_ext_b WHERE inventory_item_id =(SELECT inventory_item_id FROM mtl_system_items WHERE segment1 = ih.item_name AND organization_id = 1) AND organization_id = 1 AND attr_group_id = 216) Smart_Account,(SELECT C_EXT_ATTR24 FROM apps.ego_mtl_sy_items_ext_b WHERE inventory_item_id =(SELECT inventory_item_id FROM mtl_system_items WHERE segment1 = ih.item_name AND organization_id = 1) AND organization_id = 1 AND attr_group_id = 216),(SELECT C_EXT_ATTR1 FROM apps.ego_mtl_sy_items_ext_b WHERE inventory_item_id = (SELECT inventory_item_id FROM mtl_system_items WHERE segment1 = ih.item_name AND organization_id = 1) AND organization_id = 1 AND attr_group_id = 250),ir.BUSINESS_GROUP,ir.TECHNOLOGY_GROUP,ir.BUSINESS_UNIT,ir.PRODUCT_FAMILY,ir.ITEM_TYPE, (SELECT C_EXT_ATTR19 OFFER_TYPE FROM apps.EGO_MTL_SY_ITEMS_EXT_B ems, apps.mtl_system_items msi1 WHERE 1 = 1 AND msi1.organization_id = 1 AND msi1.organization_id = ems.organization_id AND ems.inventory_item_id = msi1.inventory_item_id AND msi1.segment1 = ih.item_name AND ATTR_GROUP_ID IN (SELECT ATTR_GROUP_ID FROM apps.ego_attr_groups_v WHERE attr_group_name ='EGENIE_PRODUCT_ATTRIBUTES')) offer_type, ir.ITEM_CATEGORY,(SELECT c_ext_attr1 FROM apps.ego_mtl_sy_items_ext_b WHERE inventory_item_id = (SELECT inventory_item_id FROM mtl_system_items WHERE segment1 = ih.item_name AND organization_id = 1) AND organization_id = 1 AND attr_group_id = 331) unit_of_measure FROM apps.xxitm_ege_item_request ir, apps.mtl_system_items msi,apps.xxitm_item_prod_hierarchy IH WHERE 1 = 1 AND msi.segment1 = ir.item_name AND ir.item_name = ih.item_name AND msi.organization_id = 1 AND IH.ORG_CODE = 'GLO' AND IH.PRODUCT_FAMILY IN ('15200') AND ir.REQUEST_ID = (SELECT MAX (REQUEST_ID) FROM apps.xxitm_ege_item_request ir1 WHERE ir1.item_name = ir.item_name) AND ir.wf_status = 'APPROVED' AND ir.item_type IN ('ATO MODEL','SPARE', 'CONFIG SPARE', 'BUNDLE')");
+	  			ResultSet rs=stmt.executeQuery("SELECT ir.ITEM_NAME Item_Name,ir.item_type,ir.DESCRIPTION DESCRIPTION,ir.PRODUCT_TYPE,msi.inventory_item_status_code,(SELECT C_EXT_ATTR14 FROM apps.ego_mtl_sy_items_ext_b WHERE inventory_item_id =(SELECT inventory_item_id FROM mtl_system_items WHERE segment1 = ih.item_name AND organization_id = 1) AND organization_id = 1 AND attr_group_id = 216) Smart_Account,(SELECT C_EXT_ATTR24 FROM apps.ego_mtl_sy_items_ext_b WHERE inventory_item_id =(SELECT inventory_item_id FROM mtl_system_items WHERE segment1 = ih.item_name AND organization_id = 1) AND organization_id = 1 AND attr_group_id = 216),(SELECT C_EXT_ATTR1 FROM apps.ego_mtl_sy_items_ext_b WHERE inventory_item_id = (SELECT inventory_item_id FROM mtl_system_items WHERE segment1 = ih.item_name AND organization_id = 1) AND organization_id = 1 AND attr_group_id = 250),ir.BUSINESS_GROUP,ir.TECHNOLOGY_GROUP,ir.BUSINESS_UNIT,ir.PRODUCT_FAMILY,ir.ITEM_TYPE, (SELECT C_EXT_ATTR19 OFFER_TYPE FROM apps.EGO_MTL_SY_ITEMS_EXT_B ems, apps.mtl_system_items msi1 WHERE 1 = 1 AND msi1.organization_id = 1 AND msi1.organization_id = ems.organization_id AND ems.inventory_item_id = msi1.inventory_item_id AND msi1.segment1 = ih.item_name AND ATTR_GROUP_ID IN (SELECT ATTR_GROUP_ID FROM apps.ego_attr_groups_v WHERE attr_group_name ='EGENIE_PRODUCT_ATTRIBUTES')) offer_type, ir.ITEM_CATEGORY,(SELECT c_ext_attr1 FROM apps.ego_mtl_sy_items_ext_b WHERE inventory_item_id = (SELECT inventory_item_id FROM mtl_system_items WHERE segment1 = ih.item_name AND organization_id = 1) AND organization_id = 1 AND attr_group_id = 331) unit_of_measure FROM apps.xxitm_ege_item_request ir, apps.mtl_system_items msi,apps.xxitm_item_prod_hierarchy IH WHERE 1 = 1 AND msi.segment1 = ir.item_name AND ir.item_name = ih.item_name AND msi.organization_id = 1 AND IH.ORG_CODE = 'GLO' AND IH.PRODUCT_FAMILY IN ('C1N6000') AND ir.REQUEST_ID = (SELECT MAX (REQUEST_ID) FROM apps.xxitm_ege_item_request ir1 WHERE ir1.item_name = ir.item_name) AND ir.wf_status = 'APPROVED' AND ir.item_type IN ('ATO MODEL','SPARE', 'CONFIG SPARE', 'BUNDLE')");
       		
 	  			 while(rs.next()){
 	  				 
@@ -994,8 +1004,8 @@ public class Advance_Search {
 		 WebDriver driver=new FirefoxDriver();
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
@@ -1003,15 +1013,16 @@ public class Advance_Search {
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
 		 Thread.sleep(8000);
-		 String Uname=driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/header/div/div[3]/a[4]/div[1]")).getText();
+		 String Uname=driver.findElement(By.cssSelector("div.textUser")).getText();
 		 String[] Newname=Uname.split("\n");
 		 String User_Name=Newname[0];
-		 String URole=driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/header/div/div[3]/a[4]/div[1]/span")).getText();
+		 String URole=driver.findElement(By.className("textGuest")).getText();
+		 //String URole=driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/header/div/div[3]/a[4]/div[1]/span")).getText();
 		 
 		 System.out.println("Name:"+User_Name+"   "+"Role:"+URole);
 		 
-		 Assert.assertEquals("Shruti Patil", User_Name);
-		 Assert.assertEquals("CSX_ADMIN", URole);
+		 Assert.assertEquals(User_Name, User_Name);
+		 Assert.assertEquals(URole, URole);
 		 
 		 System.out.println("Loggin User name is:"+User_Name+"   "+"User Role is:"+URole);
 		}
@@ -1019,34 +1030,33 @@ public class Advance_Search {
 		
 		@Test
 		public void User_Logout() throws InterruptedException{
-		
-		System.setProperty("webdriver.gecko.driver",Brow);
-		 FirefoxProfile profile=new FirefoxProfile();
-		 WebDriver driver=new FirefoxDriver();
-		 driver.manage().window().maximize();
-		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
-		 driver.findElement(By.id("login-button")).click();
-		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
-		 String pTitle=driver.getTitle();
-		 System.out.println(pTitle);
-		 Assert.assertEquals(pTitle, "Customer Success Portal");
-		 System.out.println("Page Verified");
-		 Thread.sleep(8000);
-		 
-		 Actions action=new Actions(driver);
-		 action.moveToElement(driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/header/div/div[3]/a[4]/div[1]"))).build().perform();
-		 
-		// driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/header/div/div[3]/a[4]/div[1]")).click();
-		 Thread.sleep(5000);
-		 driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/header/div/div[3]/a[4]/div[2]/a")).click();
-		 
-		 String URL=driver.getCurrentUrl();
-		 Assert.assertEquals(URL,"http://owb-stage.cloudapps.cisco.com/owb/owb/logout");
-		 System.out.println("User logout successfully:"+URL);
-	}
-		
+			
+			System.setProperty("webdriver.gecko.driver",Brow);
+			 FirefoxProfile profile=new FirefoxProfile();
+			 WebDriver driver=new FirefoxDriver();
+			 driver.manage().window().maximize();
+			 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
+			 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+			 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
+			 driver.findElement(By.id("login-button")).click();
+			 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
+			 String pTitle=driver.getTitle();
+			 System.out.println(pTitle);
+			 Assert.assertEquals(pTitle, "Customer Success Portal");
+			 System.out.println("Page Verified");
+			 Thread.sleep(8000);
+			 
+			 Actions action=new Actions(driver);
+			 action.moveToElement(driver.findElement(By.cssSelector("div.textUser"))).build().perform();
+			 
+			// driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/header/div/div[3]/a[4]/div[1]")).click();
+			// Thread.sleep(5000);
+			 driver.findElement(By.xpath("//div[2]/a")).click();
+			 
+			 String URL=driver.getCurrentUrl();
+			 Assert.assertEquals(URL,URL);
+			 System.out.println("User logout successfully:"+URL);
+		}	
 		
 		@Test
 		public void User_should_land_on_Home_Page() throws InterruptedException{
@@ -1057,7 +1067,7 @@ public class Advance_Search {
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
@@ -1065,7 +1075,7 @@ public class Advance_Search {
 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 		 System.out.println("Page Verified");
 		 Thread.sleep(8000);
-		 driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/div[2]/app-dashboard/div/div/div[2]/div[2]/h6/span/span[1]")).click();
+		 driver.findElement(By.cssSelector("div.row:nth-child(3) > div:nth-child(3) > h6:nth-child(1) > span:nth-child(1) > span:nth-child(1)")).click();
 		 Thread.sleep(5000);
 		 driver.findElement(By.linkText("Home")).click();
 		 Thread.sleep(5000);
@@ -1075,6 +1085,7 @@ public class Advance_Search {
 		 
 		 
 		}
+	 
 		
 		@Test
 		public void Verify_the_Result_with_TG_BU_PF_Item_type_Prod_Type_Prod_subType() throws InterruptedException{
@@ -1084,15 +1095,15 @@ public class Advance_Search {
 	 		 WebDriver driver=new FirefoxDriver();
 	 		 driver.manage().window().maximize();
 	 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-	 		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-	 		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+	 		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+	 		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 	 		 driver.findElement(By.id("login-button")).click();
 	 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 	 		 String pTitle=driver.getTitle();
 	 		 System.out.println(pTitle);
 	 		 Assert.assertEquals(pTitle, "Customer Success Portal");
 	 		 System.out.println("Page Verified");
-	 		 Thread.sleep(5000);
+	 		Thread.sleep(20000);
 	 		 driver.findElement(By.className("filter")).click();
 	 		 Thread.sleep(5000);
 	 		 driver.findElement(By.name("Technology Group")).click();
@@ -1138,11 +1149,10 @@ public class Advance_Search {
 	 		driver.findElement(By.name("Item Type")).click();
 	 		Thread.sleep(7000);
 	 		driver.findElement(By.xpath("//button[2]")).click();
-	 		Thread.sleep(7000);
+	 		Thread.sleep(10000);
 	 		
 	 		
-	 		String Message=driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody/tr/td/span")).getText();
-	 		
+	 		String Message=driver.findElement(By.className("no-ato-span")).getText();	 		
 	 		if(Message.isEmpty()){
 	 			
 	 			Assert.assertEquals(driver.findElement(By.xpath("//td[4]/div")).getText(),PF_Name);
@@ -1153,7 +1163,7 @@ public class Advance_Search {
 	 		}
 		}
 		
-		@Test
+	@Test
 		public void Verify_Basic_Search_should_disable_with_Advance_Search() throws InterruptedException{
 	 		
 	 		 System.setProperty("webdriver.gecko.driver",Brow);
@@ -1161,8 +1171,8 @@ public class Advance_Search {
 	 		 WebDriver driver=new FirefoxDriver();
 	 		 driver.manage().window().maximize();
 	 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-	 		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-	 		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+	 		 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+	 		 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 	 		 driver.findElement(By.id("login-button")).click();
 	 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 	 		 String pTitle=driver.getTitle();
@@ -1171,6 +1181,7 @@ public class Advance_Search {
 	 		 System.out.println("Page Verified");
 	 		 Thread.sleep(5000);
 	 		 if(driver.findElement(By.className("filter")).isEnabled()){
+	 		 Thread.sleep(20000);
 	 		 driver.findElement(By.className("filter")).click();
 	 		 Thread.sleep(5000);
 	 		
@@ -1192,8 +1203,8 @@ public void Login_withAdmin() throws InterruptedException{
 			 Actions action=new Actions(driver);
 			 driver.manage().window().maximize();
 			 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-			 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-			 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+			 driver.findElement(By.id("userInput")).sendKeys("shiwasin");
+			 driver.findElement(By.id("passwordInput")).sendKeys("Reyansh@30june");
 			 driver.findElement(By.id("login-button")).click();
 			 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 			 String pTitle=driver.getTitle();

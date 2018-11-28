@@ -3,19 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB"/>
+      <class name="test_report.Advance_Search"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB">
+      <class name="test_report.Advance_Search">
         <methods>
-          <include name="OfferType_Count"/>
-          <include name="Search_byOfferType"/>
-          <include name="Search_byPF_Count"/>
-          <include name="Search_count_byCommerceoffer"/>
+          <include name="Autosearch_with_PF"/>
+          <include name="Advancesearch_verify_the_Pictorial_View"/>
+          <include name="Autosearch_with_BU"/>
         </methods>
-      </class> <!-- test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB -->
+      </class> <!-- test_report.Advance_Search -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -31,7 +31,7 @@ public class Basic_Search_Invalid {
 	 Actions action=new Actions(driver);
 	 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 	 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-	 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+	 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 	 driver.findElement(By.id("login-button")).click();
 	 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 	 String pTitle=driver.getTitle();
@@ -82,7 +82,7 @@ public class Basic_Search_Invalid {
 		 Actions action=new Actions(driver);
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
@@ -131,7 +131,7 @@ public class Basic_Search_Invalid {
 			 Actions action=new Actions(driver);
 			 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 			 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-			 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+			 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 			 driver.findElement(By.id("login-button")).click();
 			 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 			 String pTitle=driver.getTitle();
@@ -178,7 +178,7 @@ public class Basic_Search_Invalid {
 			 Actions action=new Actions(driver);
 			 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 			 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-			 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+			 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 			 driver.findElement(By.id("login-button")).click();
 			 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 			 String pTitle=driver.getTitle();
@@ -227,7 +227,7 @@ public class Basic_Search_Invalid {
 			 Actions action=new Actions(driver);
 			 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 			 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-			 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+			 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 			 driver.findElement(By.id("login-button")).click();
 			 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 			 String pTitle=driver.getTitle();
@@ -275,7 +275,7 @@ public class Basic_Search_Invalid {
 			 Actions action=new Actions(driver);
 			 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 			 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-			 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+			 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 			 driver.findElement(By.id("login-button")).click();
 			 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 			 String pTitle=driver.getTitle();
@@ -322,7 +322,7 @@ public class Basic_Search_Invalid {
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
@@ -358,7 +358,7 @@ public class Basic_Search_Invalid {
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
@@ -392,7 +392,7 @@ public class Basic_Search_Invalid {
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
@@ -426,7 +426,7 @@ public class Basic_Search_Invalid {
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
@@ -469,7 +469,7 @@ public class Basic_Search_Invalid {
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();
@@ -513,7 +513,7 @@ public class Basic_Search_Invalid {
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 String pTitle=driver.getTitle();

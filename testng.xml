@@ -7,6 +7,7 @@
       <class name="test_report.BasicSearch_Veirfy_Search_Major_MinorRecords_WithDB"/>
       <class name="test_report.BasicSearch_Filter_With_Valid_Invalid_Value"/>
       <class name="test_report.Basic_Search_Invalid"/>
+      <class name="test_report.Advance_Search"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

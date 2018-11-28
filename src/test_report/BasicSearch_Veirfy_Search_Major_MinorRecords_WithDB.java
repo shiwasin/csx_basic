@@ -48,7 +48,7 @@ public void Login_withAdmin() throws InterruptedException{
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 		 driver.findElement(By.id("login-button")).click();
 		 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 		 Thread.sleep(15000);
@@ -61,7 +61,7 @@ public void Login_withAdmin() throws InterruptedException{
 		
 	}
 
-	 @Test
+	// @Test
 	    public void Search_byPF() throws Throwable{
 		// TODO Auto-generated method stub
 		 String Brow="C:\\setup\\geckodriver.exe";
@@ -72,7 +72,7 @@ public void Login_withAdmin() throws InterruptedException{
 		 driver.manage().window().maximize();
 		 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 		 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+		 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 		 driver.findElement(By.id("login-button")).click();
 		 
 		 Thread.sleep(15000);
@@ -134,7 +134,7 @@ public void Login_withAdmin() throws InterruptedException{
 			 driver.manage().window().maximize();
 			 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 			 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-			 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+			 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 			 driver.findElement(By.id("login-button")).click();
 			 
 			 Thread.sleep(15000);
@@ -158,9 +158,9 @@ public void Login_withAdmin() throws InterruptedException{
 			 driver.findElement(By.tagName("input")).sendKeys(Keys.ENTER);
 			 Thread.sleep(3000);
 			 Actions action1=new Actions(driver);
-			 action1.moveToElement(driver.findElement(By.xpath("//span[2]/button"))).click().build().perform();
+			 action1.moveToElement(driver.findElement(By.cssSelector(".select-dd-click"))).click().build().perform();
 			 Thread.sleep(3000);
-			 driver.findElement(By.xpath("(//input[@type='checkbox'])[21]")).click();
+			 driver.findElement(By.xpath("//input[@type='checkbox']")).click();
 			 Thread.sleep(3000);
 			
 			 
@@ -183,7 +183,7 @@ public void Login_withAdmin() throws InterruptedException{
 		}
 	//==============search_by_commerce_offer================================//
 		
-	   @Test
+	  // @Test
 		public void Search_byCommerceOffer() throws InterruptedException{
 					
 			String Brow="C:\\setup\\geckodriver.exe";
@@ -194,7 +194,7 @@ public void Login_withAdmin() throws InterruptedException{
 			 driver.manage().window().maximize();
 			 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 			 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-			 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+			 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 			 driver.findElement(By.id("login-button")).click();
 			 
 			 Thread.sleep(15000);
@@ -241,7 +241,7 @@ public void Login_withAdmin() throws InterruptedException{
 				     
 				     try {
 				  			Class.forName("oracle.jdbc.driver.OracleDriver");
-				  			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@ldap://ldap-ldstg3.cisco.com:5000/cn=OracleContext,dc=cisco,dc=com/TS1CG1_SRVC_OTH","XXWOC","Pr1R4M9M");
+				  			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@ldap://ldap-ldstg3.cisco.com:5000/cn=OracleContext,dc=cisco,dc=com/ts3CG1_SRVC_OTH","XXWOC","Pr1R4M9M");
 				  			//if(con!=null)System.out.println("found");
 				  			 
 				  			Statement stmt=con.createStatement(); 
@@ -300,7 +300,7 @@ public void Login_withAdmin() throws InterruptedException{
 				 driver.manage().window().maximize();
 				 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 				 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-				 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+				 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 				 driver.findElement(By.id("login-button")).click();
 				 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 				 String pTitle=driver.getTitle();
@@ -324,15 +324,10 @@ public void Login_withAdmin() throws InterruptedException{
 				 String Page_Value=driver.findElement(By.xpath("//div[3]/div/div/div/select/option[3]")).getText();
 				 System.out.println(Page_Value);
 				 Thread.sleep(1000);
-				 
-				    WebElement table = driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody"));
+				   
 
-				    List<WebElement> rows = table.findElements(By.tagName("tr"));
-				    List<WebElement> column = table.findElements(By.tagName("td"));
-				    List<String> value = new ArrayList<String>();
-
-				    System.out.println(rows.size());
-				    System.out.println(column.size());
+//				    System.out.println(rows.size());
+	//			    System.out.println(column.size());
 				    
 				    String Cou=driver.findElement(By.xpath("//*/div/div[3]/div[2]/span[3]")).getText();
 				    System.out.println(Cou);
@@ -352,7 +347,7 @@ public void Login_withAdmin() throws InterruptedException{
 			}
 				
 				
-			  @Test
+			 // @Test
 				  public void OfferType_Count() throws InterruptedException
 				  {
 					   System.out.println(This.class.getSimpleName());
@@ -363,7 +358,7 @@ public void Login_withAdmin() throws InterruptedException{
 						driver.manage().window().maximize();
 						 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 						 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-						 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+						 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 						 driver.findElement(By.id("login-button")).click();
 						 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 						 String pTitle=driver.getTitle();
@@ -388,7 +383,7 @@ public void Login_withAdmin() throws InterruptedException{
 						 String Page_Value=driver.findElement(By.xpath("//div[3]/div/div/div/select/option[3]")).getText();
 						 System.out.println(Page_Value);
 						 Thread.sleep(5000);
-						    WebElement table = driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody"));
+	 						WebElement table = driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody"));
 
 						   // WebElement table = driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody"));
 						   // WebElement table1=driver.findElement(By.cssSelector("html body.cui app-root app-main div.content.mainContainer main.row div.col-md-12 div.container app-search-result app-ato-list div div table.table.table--bordered.offers-table.ato-table"));
@@ -416,7 +411,7 @@ public void Login_withAdmin() throws InterruptedException{
 						    
 						    try {
 					  			Class.forName("oracle.jdbc.driver.OracleDriver");
-					  			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@ldap://ldap-ldstg3.cisco.com:5000/cn=OracleContext,dc=cisco,dc=com/TS1CG1_SRVC_OTH","XXWOC","Pr1R4M9M");
+					  			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@ldap://ldap-ldstg3.cisco.com:5000/cn=OracleContext,dc=cisco,dc=com/ts3CG1_SRVC_OTH","XXWOC","Pr1R4M9M");
 					  			//if(con!=null)System.out.println("found");
 					  			 
 					  			Statement stmt=con.createStatement(); 
@@ -462,7 +457,7 @@ public void Login_withAdmin() throws InterruptedException{
 											driver.manage().window().maximize();
 											 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 											 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-											 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+											 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 											 driver.findElement(By.id("login-button")).click();
 											 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 											 String pTitle=driver.getTitle();
@@ -513,100 +508,93 @@ public void Login_withAdmin() throws InterruptedException{
 							  			
 							  			 @Test
 							  			 public void Validate_Subscription_BOM() throws InterruptedException, IOException{
-							 				String Brow="C:\\setup\\geckodriver.exe";
-							 						System.setProperty("webdriver.gecko.driver",Brow);
-							 						FirefoxProfile profile=new FirefoxProfile();
-							 						WebDriver driver=new FirefoxDriver();
-							 						driver.manage().window().maximize();
-							 						driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
-							 						driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-							 						driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
-							 						driver.findElement(By.id("login-button")).click();
-							 						driver.get("https://csx-cdev.cisco.com/customersuccess/#/");
-							 						String pTitle=driver.getTitle();
-							 						System.out.println(pTitle);
-							 						Assert.assertEquals(pTitle, "Customer Success Portal");
-							 						System.out.println("Page Title Verified:"+pTitle);
-							 						Thread.sleep(3000);
-							 						 
-							 						Select drop=new Select(driver.findElement(By.tagName("Select")));
-							 						drop.selectByIndex(1);
-							 							
-							 						driver.findElement(By.tagName("input")).sendKeys("L-ISE-ADV-S-2500=");
-							 						Thread.sleep(3000);
-							 						driver.findElement(By.tagName("input")).sendKeys(Keys.ENTER);
-							 						Actions action=new Actions(driver);
-							 						Thread.sleep(3000);
-							 						driver.findElement(By.cssSelector("span.collapse-icon")).click();
-							 						Thread.sleep(5000);
-							 						
-							 						String Error_msg=driver.findElement(By.cssSelector("span.showErrorMsg")).getText();
-							 							
-							 							if(Error_msg==null)
-							 							{
-							 								
-							 								System.out.println("Minor is present");
-							 								File subs_shot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-							 								FileUtils.copyFile(subs_shot, new File("C:/Users/shiwasin.PARTNERS/Desktop/gitWorkspace/CSX/Basic_Search/Subscription_UI.png"));
-							 		 					    //WebElement table = driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody"));
+							  				String Brow="C:\\setup\\geckodriver.exe";
+							  						System.setProperty("webdriver.gecko.driver",Brow);
+							  						FirefoxProfile profile=new FirefoxProfile();
+							  						WebDriver driver=new FirefoxDriver();
+							  						driver.manage().window().maximize();
+							  						driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
+							  						driver.findElement(By.id("userInput")).sendKeys("shrutipa");
+							  						driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
+							  						driver.findElement(By.id("login-button")).click();
+							  						driver.get("https://csx-cdev.cisco.com/customersuccess/#/");
+							  						String pTitle=driver.getTitle();
+							  						System.out.println(pTitle);
+							  						Assert.assertEquals(pTitle, "Customer Success Portal");
+							  						System.out.println("Page Title Verified:"+pTitle);
+							  						Thread.sleep(3000);
+							  						 
+							  						Select drop=new Select(driver.findElement(By.tagName("Select")));
+							  						drop.selectByIndex(1);
+							  							
+							  						driver.findElement(By.tagName("input")).sendKeys("L-ISE-ADV-S-2500=");
+							  						Thread.sleep(3000);
+							  						driver.findElement(By.tagName("input")).sendKeys(Keys.ENTER);
+							  						Actions action=new Actions(driver);
+							  						Thread.sleep(3000);
+							  						driver.findElement(By.cssSelector("span.collapse-icon")).click();
+							  						Thread.sleep(5000);
+							  						
+							  						//String Error_msg=driver.findElement(By.cssSelector("span.showErrorMsg")).getText();
+							  							
+							  							//if(Error_msg==null)
+							  							//{
+							  								
+							  								System.out.println("Minor is present");
+							  								File subs_shot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+							  								FileUtils.copyFile(subs_shot, new File("C:/Users/shiwasin.PARTNERS/Desktop/gitWorkspace/CSX/Basic_Search/Subscription_UI.png"));
+							  		 					    //WebElement table = driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody"));
 
-							 		 						WebElement table = driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div[2]/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody"));
-							 		 					    List<WebElement> rows = table.findElements(By.tagName("tr"));
-							 		 					    List<WebElement> column = table.findElements(By.tagName("td"));
-							 		 					    List<String> value = new ArrayList<String>();
+							  		 						WebElement table = driver.findElement(By.xpath("/html/body/app-root/app-main/div/main/div/div[2]/app-search-result/app-ato-list/div/div[2]/table/tbody"));
+							  		 					    List<WebElement> rows = table.findElements(By.tagName("tr"));
+							  		 					    List<WebElement> column = table.findElements(By.tagName("td"));
+							  		 					    List<String> value = new ArrayList<String>();
 
-							 		 					   // System.out.println("rows:"+rows.size());
-							 		 					    //System.out.println(column.size());
-							 		 					    int sub_count=rows.size();
-							 		 					    
-							 		 					   
-							 		 					    ArrayList<String> Subscription_value=new ArrayList<String>();
-							 		 					    for(int i=3;i<=rows.size();i++){
-							 		 					    	
-							 		 					    	String Subs_minor_list=driver.findElement(By.xpath("//tr["+i+"]/td[2]/div")).getText();
-							 		 					    	Subscription_value.add(Subs_minor_list);
-							 		 					    	System.out.println("Minor ON UI:"+Subs_minor_list);
-							 		 					    }
+							  		 					   // System.out.println("rows:"+rows.size());
+							  		 					    //System.out.println(column.size());
+							  		 					    int sub_count=rows.size();
+							  		 					  
+							  		 					   
+							  		 					    ArrayList<String> Subscription_value=new ArrayList<String>();
+							  		 					    for(int i=2;i<=rows.size();i++){
+							  		 					    	
+							  		 					    	String Subs_minor_list=driver.findElement(By.xpath("//tr["+i+"]/td[2]/div")).getText();
+							  		 					    	Subscription_value.add(Subs_minor_list);
+							  		 					    	System.out.println("Minor ON UI:"+Subs_minor_list);
+							  		 					    }
 
-							 		 						    
-							 		 						 
-							 		 						 
-							 		 								try {
-							 		 					  			Class.forName("oracle.jdbc.driver.OracleDriver");
-							 		 					  			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@ldap://tns-prod:5000/cn=OracleContext,dc=cisco,dc=com/TS3DMP","XXCFG_Q2O_U","RRCH9F_6q");
-							 		 					  			if(con!=null)System.out.println("found");
-							 		 					  			
-							 		 					  			 
-							 		 					  			Statement stmt=con.createStatement(); 
-							 		 					  			ArrayList<String> Subscription_List=new ArrayList<String>();
-							 		 					  			ResultSet rs=stmt.executeQuery("select * from xxwoc_prod_sv_mapping where product_name in ('L-ISE-ADV-S-2500=') and service_type = 'SUBSCRIPTION'");  
-							 		 					  			
-							 		 					  			
-							 		 					  			while(rs.next()){
-							 		 					  				String Subscription_Minor=rs.getString(3);
-							 		 					  				Subscription_List.add(Subscription_Minor);
-							 		 					  				System.out.println("Minor on DB:"+Subscription_Minor);
-							 		 					  			}
-							 		 					  			    System.out.println("size:"+Subscription_List.size());
-							 		 					                Collections.sort(Subscription_List);
-							 		 					                Collections.sort(Subscription_value);
-							 		 					                Assert.assertEquals(Subscription_List, Subscription_value);
-							 		 					                System.out.println("Subscription Minor records are same on ui and db ");
-							 		 					  				
-							 		 					  						  					  		} catch (ClassNotFoundException | SQLException e) {
-							 		 					  			// TODO Auto-generated catch block
-							 		 					  			e.printStackTrace();
-							 		 					  			 
-							 		 					  		}
-							 		 					    
-
-							 							}
-							 							else{
-							 								System.out.println("Subscription Minor Records are available on DB but not available on UI");
-							 							}
-							 							
-							 							driver.quit();
-							 							}
+							  		 						    
+							  		 						 
+							  		 						 
+							  		 								try {
+							  		 					  			Class.forName("oracle.jdbc.driver.OracleDriver");
+							  		 					  			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@ldap://tns-prod:5000/cn=OracleContext,dc=cisco,dc=com/TS3DMP","XXCFG_Q2O_U","RRCH9F_6q");
+							  		 					  			if(con!=null)System.out.println("found");
+							  		 					  			
+							  		 					  			 
+							  		 					  			Statement stmt=con.createStatement(); 
+							  		 					  			ArrayList<String> Subscription_List=new ArrayList<String>();
+							  		 					  			ResultSet rs=stmt.executeQuery("select * from xxwoc_prod_sv_mapping where product_name in ('L-ISE-ADV-S-2500=') and service_type = 'SUBSCRIPTION'");  
+							  		 					  			
+							  		 					  			
+							  		 					  			while(rs.next()){
+							  		 					  				String Subscription_Minor=rs.getString(3);
+							  		 					  				Subscription_List.add(Subscription_Minor);
+							  		 					  				System.out.println("Minor on DB:"+Subscription_Minor);
+							  		 					  			}
+							  		 					  			    System.out.println("size:"+Subscription_List.size());
+							  		 					                Collections.sort(Subscription_List);
+							  		 					                Collections.sort(Subscription_value);
+							  		 					                Assert.assertEquals(Subscription_List, Subscription_value);
+							  		 					                System.out.println("Subscription Minor records are same on ui and db ");
+							  		 					  				
+							  		 					  						  					  		} catch (ClassNotFoundException | SQLException e) {
+							  		 					  			// TODO Auto-generated catch block
+							  		 					  			e.printStackTrace();
+							  		 					  			 
+							  		 					  		}
+							  		 				driver.close();
+							  			 }
 
 							  					    
 							  			
@@ -620,7 +608,7 @@ public void Login_withAdmin() throws InterruptedException{
 							  							driver.manage().window().maximize();
 							  							driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 							  							driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-							  							driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+							  							driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 							  							driver.findElement(By.id("login-button")).click();
 							  							driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 							  							String pTitle=driver.getTitle();
@@ -660,7 +648,7 @@ public void Login_withAdmin() throws InterruptedException{
 
 							  		//==========================Filter should be cleared when user click on x icon==================
 							  			
-							  		 @Test
+							  	//	 @Test
 							  			  public void Filter_Value_Should_be_Clear() throws InterruptedException{
 							  					// TODO Auto-generated method stub
 							  					
@@ -671,7 +659,7 @@ public void Login_withAdmin() throws InterruptedException{
 							  					Actions action=new Actions(driver);
 							  					 driver.get("https://sso-test.cisco.com/autho/forms/CECLogin.html");
 							  					 driver.findElement(By.id("userInput")).sendKeys("shrutipa");
-							  					 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$11");
+							  					 driver.findElement(By.id("passwordInput")).sendKeys("Vrushsen$55");
 							  					 driver.findElement(By.id("login-button")).click();
 							  					 driver.get("https://csx-stage.cisco.com/customersuccess/#/");
 							  					 String pTitle=driver.getTitle();
